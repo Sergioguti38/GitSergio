@@ -1,0 +1,193 @@
+:root {
+  --color-primario: #b3541e;
+  --color-oscuro: #2b2523;
+  --color-claro: #f7f2ec;
+  --color-texto: #3a332f;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-texto);
+  background: var(--color-claro);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--color-oscuro);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.logo {
+  font-size: 1.3rem;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-header nav a:hover {
+  color: var(--color-primario);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primario), #8a3c12);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-oscuro);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* Servicios */
+.servicios, .galeria, .contacto {
+  padding: 70px 20px;
+}
+
+.servicios h2, .galeria h2, .contacto h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-oscuro);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.card h3 {
+  color: var(--color-primario);
+  margin-bottom: 10px;
+}
+
+/* Galería */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.foto {
+  background: #ddd3c8;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #6b5f54;
+  font-weight: 600;
+}
+
+/* Contacto */
+.contacto {
+  background: #fff;
+}
+
+#form-contacto {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.oculto {
+  display: none;
+  text-align: center;
+  margin-top: 16px;
+  color: green;
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-oscuro);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}
